@@ -8,5 +8,7 @@ REPORT zdat_test_git.
 IF sy-subrc = 0.
 ENDIF.
 
-IF sy-subrc = 0.
-ENDIF.
+SELECT SINGLE *
+  FROM mara
+  WHERE matnr = 'sm_rep01'
+  INTO @DATA(ls_mara).
